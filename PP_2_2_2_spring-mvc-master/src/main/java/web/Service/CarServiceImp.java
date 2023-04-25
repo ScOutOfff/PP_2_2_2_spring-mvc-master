@@ -20,6 +20,7 @@ public class CarServiceImp implements CarService {
         else {
             int count = Integer.parseInt(countString);
             if(count > 5) count = 5;
+            if(count < 0) count = 0;
             List<Car> carList = new ArrayList<>();
             for (int i = 0; i < count; i++) {
                 carList.add(cars.get(i));
